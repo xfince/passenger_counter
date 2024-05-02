@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Passenger Counter</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
+  <style>
+    body {
+      background-image: url('https://source.unsplash.com/1600x900/?railway-station');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .platform {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .counter-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .counter-btn:hover {
+      background-color: #388E3C;
+    }
+
+    .counter-display {
+      font-size: 5rem;
+      font-weight: bold;
+      color: #333;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .footer {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 1rem;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .footer {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen justify-between">
+  <div class="platform mx-auto">
+    <h1 class="text-4xl font-bold mb-6 text-center">Passenger Counter</h1>
+    <div class="flex flex-col items-center mb-6">
+      <span class="counter-display mb-4" id="count-el">0</span>
+      <div class="flex">
+        <button class="counter-btn mr-4" onclick="increment()">Increment</button>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" id="save-btn" onclick="save()">Save</button>
+      </div>
+    </div>
+    <p id="save-el">Previous entries: </p>
+    <script src="index.js"></script>
+    <p class="text-lg text-center">Welcome to the Station!</p>
+  </div>
+
+  <footer class="footer">
+    <p>Created by Kimani Vincent</p>
+    <p>Contact: (254) 772 501512</p>
+    <p>Email: sf.vincent47@gmail.com</p>
+  </footer>
+</body>
+</html>
